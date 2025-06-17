@@ -29,6 +29,12 @@ Route::group([ 'namespace' => 'App\Http\Controllers\Blog', 'prefix' => 'blog'], 
         ->names('blog.posts');
 });
 
+Route::get('process-video', 'DiggingDeeperController@processVideo')
+    ->name('digging_deeper.processVideo');
+
+Route::get('prepare-catalog', 'DiggingDeeperController@prepareCatalog')
+    ->name('digging_deeper.prepareCatalog');
+
 
 //Адмінка
 $groupData = [
